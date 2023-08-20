@@ -7,6 +7,7 @@ from django.db import models
 
 class UserProfile(AbstractUser):
     phone_number = models.CharField(verbose_name="Номер телефона", max_length=15)
+    telegram_chat_id = models.BigIntegerField(default=0, blank=True, null=True)
 
 
 class ServiceProfile(models.Model):
@@ -15,6 +16,7 @@ class ServiceProfile(models.Model):
     surname = models.CharField(verbose_name="Отчество", max_length=150)
     document_photo = models.ImageField(verbose_name="Фото", upload_to="services/photos/")
     kind_of_activity = models.CharField(verbose_name="Вид деятельности", max_length=150)
+    telegram_chat_id = models.BigIntegerField(default=0, blank=True, null=True)
 
 
 class Service(models.Model):

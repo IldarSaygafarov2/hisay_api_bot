@@ -1,0 +1,1435 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2023-08-21T08:12:55.989Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "28",
+      "object_repr": "",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 4,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 4,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 4,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 4,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 5,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 5,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 5,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 5,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add service",
+      "content_type": 6,
+      "codename": "add_service"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change service",
+      "content_type": 6,
+      "codename": "change_service"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete service",
+      "content_type": 6,
+      "codename": "delete_service"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view service",
+      "content_type": 6,
+      "codename": "view_service"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add service profile",
+      "content_type": 7,
+      "codename": "add_serviceprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change service profile",
+      "content_type": 7,
+      "codename": "change_serviceprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete service profile",
+      "content_type": 7,
+      "codename": "delete_serviceprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view service profile",
+      "content_type": 7,
+      "codename": "view_serviceprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add service hashtag",
+      "content_type": 8,
+      "codename": "add_servicehashtag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change service hashtag",
+      "content_type": 8,
+      "codename": "change_servicehashtag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete service hashtag",
+      "content_type": 8,
+      "codename": "delete_servicehashtag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view service hashtag",
+      "content_type": 8,
+      "codename": "view_servicehashtag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 9,
+      "codename": "add_userprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 9,
+      "codename": "change_userprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 9,
+      "codename": "delete_userprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 9,
+      "codename": "view_userprofile"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "api",
+      "model": "service"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "api",
+      "model": "serviceprofile"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "api",
+      "model": "servicehashtag"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "api",
+      "model": "userprofile"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ldybultx0cs09g9szsmsco8sxwd1nkb7",
+    "fields": {
+      "session_data": ".eJxVjDEOAiEQRe9CbcggwgyW9p6BwACyaiBZdivj3XWTLbT9773_Ej6sS_XryLOfkjgLJQ6_Wwz8yG0D6R7arUvubZmnKDdF7nTIa0_5edndv4MaRv3WAFgUMWhGVMaZI6mirDaIRgMyOmCHrjCdKAYdMzODy5owobGWrHh_AKfFNqc:1qY01B:FLgPcOZmICfRm5qHJ40rMMTLcXL9rw98n4E0U9yoAwQ",
+      "expire_date": "2023-09-04T08:12:09.830Z"
+    }
+  },
+  {
+    "model": "api.userprofile",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$uNlL3v2uLr7rIu3ZPUPEkl$UT3o3VbruO9H/FZhm2mrVtXN6K0IyRSVC0PkPi+bG5A=",
+      "last_login": "2023-08-21T08:12:09.828Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-08-21T08:09:04.068Z",
+      "phone_number": "",
+      "telegram_chat_id": 0,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 1,
+    "fields": {
+      "name": "Мобильные телефоны"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 2,
+    "fields": {
+      "name": "Компьютеры"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 3,
+    "fields": {
+      "name": "Электроника"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 4,
+    "fields": {
+      "name": "Бытовая техника"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 5,
+    "fields": {
+      "name": "Улучшение дома и инструменты"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 6,
+    "fields": {
+      "name": "Безопасность и защита"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 7,
+    "fields": {
+      "name": "Автомобили и мотоциклы"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 8,
+    "fields": {
+      "name": "Недвижимость"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 9,
+    "fields": {
+      "name": "Дом, сад и офис"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 10,
+    "fields": {
+      "name": "Мебель"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 11,
+    "fields": {
+      "name": "Одежда"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 12,
+    "fields": {
+      "name": "Обувь"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 13,
+    "fields": {
+      "name": "Аксессуары"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 14,
+    "fields": {
+      "name": "Спорт и развлечение"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 15,
+    "fields": {
+      "name": "Игрушки и хобби"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 16,
+    "fields": {
+      "name": "Красота и здоровье"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 17,
+    "fields": {
+      "name": "Продукты для домашних животных"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 18,
+    "fields": {
+      "name": "Еда"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 19,
+    "fields": {
+      "name": "Дом"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 20,
+    "fields": {
+      "name": "Строительство / ремонт / уборка"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 21,
+    "fields": {
+      "name": "Финансовые услуги / партнерство"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 22,
+    "fields": {
+      "name": "Перевозки / аренда транспорта"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 23,
+    "fields": {
+      "name": "Реклама / полиграфия / маркетинг / интернет"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 24,
+    "fields": {
+      "name": "Сырьё / материалы"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 25,
+    "fields": {
+      "name": "Красота / здоровье"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 26,
+    "fields": {
+      "name": "Оборудование"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 27,
+    "fields": {
+      "name": "Образование / Спорт"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 29,
+    "fields": {
+      "name": "Услуги для животных"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 30,
+    "fields": {
+      "name": "Развлечения / Искусство / Фото / Видео"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 31,
+    "fields": {
+      "name": "Туризм"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 32,
+    "fields": {
+      "name": "Услуги переводчиков / набор текста"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 33,
+    "fields": {
+      "name": "Авто / мото услуги"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 34,
+    "fields": {
+      "name": "Обслуживание, ремонт техники"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 35,
+    "fields": {
+      "name": "Юридические услуги"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 36,
+    "fields": {
+      "name": "Прокат товаров"
+    }
+  },
+  {
+    "model": "api.service",
+    "pk": 37,
+    "fields": {
+      "name": "Прочие услуги"
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 1,
+    "fields": {
+      "name": "#iphone",
+      "service": 1
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 2,
+    "fields": {
+      "name": "#samsung",
+      "service": 1
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 3,
+    "fields": {
+      "name": "#xiomi",
+      "service": 1
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 4,
+    "fields": {
+      "name": "#redmi",
+      "service": 1
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 5,
+    "fields": {
+      "name": "#зарядчик",
+      "service": 1
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 6,
+    "fields": {
+      "name": "#рассрочка",
+      "service": 1
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 7,
+    "fields": {
+      "name": "#пк",
+      "service": 2
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 8,
+    "fields": {
+      "name": "#ноутбук",
+      "service": 2
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 9,
+    "fields": {
+      "name": "#ssd",
+      "service": 2
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 10,
+    "fields": {
+      "name": "#rtx",
+      "service": 2
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 11,
+    "fields": {
+      "name": "#ddr",
+      "service": 2
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 12,
+    "fields": {
+      "name": "#lenovo",
+      "service": 2
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 13,
+    "fields": {
+      "name": "#apple",
+      "service": 2
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 14,
+    "fields": {
+      "name": "#intel",
+      "service": 2
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 15,
+    "fields": {
+      "name": "#электроникаоптом",
+      "service": 3
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 16,
+    "fields": {
+      "name": "#электроникаизкитая",
+      "service": 3
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 17,
+    "fields": {
+      "name": "#электрониканазаказ",
+      "service": 3
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 18,
+    "fields": {
+      "name": "#сантехника",
+      "service": 4
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 19,
+    "fields": {
+      "name": "#бытоваятехника",
+      "service": 4
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 20,
+    "fields": {
+      "name": "#техника",
+      "service": 4
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 21,
+    "fields": {
+      "name": "#кухоннаятехника",
+      "service": 4
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 22,
+    "fields": {
+      "name": "#наборинструментов",
+      "service": 5
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 23,
+    "fields": {
+      "name": "#обои",
+      "service": 5
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 24,
+    "fields": {
+      "name": "#камерынаблюдения",
+      "service": 6
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 25,
+    "fields": {
+      "name": "#безопасностьдетей",
+      "service": 6
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 26,
+    "fields": {
+      "name": "#автомобильспробегом",
+      "service": 7
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 27,
+    "fields": {
+      "name": "#автомобильвкредит",
+      "service": 7
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 28,
+    "fields": {
+      "name": "#автомобильнапрокат",
+      "service": 7
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 29,
+    "fields": {
+      "name": "#рассрочка",
+      "service": 8
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 30,
+    "fields": {
+      "name": "#выкуп",
+      "service": 8
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 31,
+    "fields": {
+      "name": "#цветы",
+      "service": 9
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 32,
+    "fields": {
+      "name": "#декор",
+      "service": 9
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 33,
+    "fields": {
+      "name": "#офисной",
+      "service": 10
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 34,
+    "fields": {
+      "name": "#кресло",
+      "service": 10
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 35,
+    "fields": {
+      "name": "#оптом",
+      "service": 11
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 36,
+    "fields": {
+      "name": "#скидки",
+      "service": 11
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 37,
+    "fields": {
+      "name": "#туфли",
+      "service": 12
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 38,
+    "fields": {
+      "name": "#красовки",
+      "service": 12
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 39,
+    "fields": {
+      "name": "#изтурции",
+      "service": 12
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 40,
+    "fields": {
+      "name": "#изкитая",
+      "service": 12
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 41,
+    "fields": {
+      "name": "#наушники",
+      "service": 13
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 42,
+    "fields": {
+      "name": "#экстрим",
+      "service": 14
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 43,
+    "fields": {
+      "name": "#спортинвентарь",
+      "service": 14
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 44,
+    "fields": {
+      "name": "#сноуборды",
+      "service": 14
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 45,
+    "fields": {
+      "name": "#спортивное_питание",
+      "service": 14
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 46,
+    "fields": {
+      "name": "#бады",
+      "service": 14
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 47,
+    "fields": {
+      "name": "#протеин",
+      "service": 14
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 48,
+    "fields": {
+      "name": "#велосипеды",
+      "service": 14
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 49,
+    "fields": {
+      "name": "#спорттовары",
+      "service": 14
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 50,
+    "fields": {
+      "name": "#игрушкидлядетей",
+      "service": 15
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 51,
+    "fields": {
+      "name": "#игрушкидлявзрослых",
+      "service": 15
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 52,
+    "fields": {
+      "name": "#косметикаизкореи",
+      "service": 16
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 53,
+    "fields": {
+      "name": "#wiskass",
+      "service": 17
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 54,
+    "fields": {
+      "name": "#здороваяеда",
+      "service": 18
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 55,
+    "fields": {
+      "name": "#диета",
+      "service": 18
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 56,
+    "fields": {
+      "name": "#похудение",
+      "service": 18
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 57,
+    "fields": {
+      "name": "#правильноепитание",
+      "service": 18
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 58,
+    "fields": {
+      "name": "#завтрак",
+      "service": 18
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 59,
+    "fields": {
+      "name": "#обед",
+      "service": 18
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 60,
+    "fields": {
+      "name": "#ужин",
+      "service": 18
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 61,
+    "fields": {
+      "name": "#уходзасадом",
+      "service": 19
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 62,
+    "fields": {
+      "name": "#арендаквартиры",
+      "service": 19
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 63,
+    "fields": {
+      "name": "#клининг",
+      "service": 20
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 64,
+    "fields": {
+      "name": "#купитьакции",
+      "service": 21
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 65,
+    "fields": {
+      "name": "#совет",
+      "service": 21
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 66,
+    "fields": {
+      "name": "#вложиться",
+      "service": 21
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 67,
+    "fields": {
+      "name": "#бизнес",
+      "service": 21
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 68,
+    "fields": {
+      "name": "#логистика",
+      "service": 22
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 69,
+    "fields": {
+      "name": "#грузовик",
+      "service": 22
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 70,
+    "fields": {
+      "name": "#доставка",
+      "service": 22
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 71,
+    "fields": {
+      "name": "#смм",
+      "service": 23
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 72,
+    "fields": {
+      "name": "#распечаткакниги",
+      "service": 23
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 73,
+    "fields": {
+      "name": "#визитка",
+      "service": 23
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 74,
+    "fields": {
+      "name": "#пластик",
+      "service": 24
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 75,
+    "fields": {
+      "name": "#массаж",
+      "service": 25
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 76,
+    "fields": {
+      "name": "#сервисныйцентр",
+      "service": 26
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 77,
+    "fields": {
+      "name": "#фитнес-инструктор",
+      "service": 27
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 78,
+    "fields": {
+      "name": "#bodybuilding",
+      "service": 27
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 79,
+    "fields": {
+      "name": "#марафон",
+      "service": 27
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 83,
+    "fields": {
+      "name": "#ветеринария",
+      "service": 29
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 84,
+    "fields": {
+      "name": "#вакцинация",
+      "service": 29
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 85,
+    "fields": {
+      "name": "#бассейн",
+      "service": 30
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 86,
+    "fields": {
+      "name": "#дешёвыебилеты",
+      "service": 31
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 87,
+    "fields": {
+      "name": "#виза",
+      "service": 31
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 88,
+    "fields": {
+      "name": "#шенген",
+      "service": 31
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 89,
+    "fields": {
+      "name": "#перевод",
+      "service": 32
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 90,
+    "fields": {
+      "name": "#тюнинг",
+      "service": 33
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 91,
+    "fields": {
+      "name": "#дешёваямойка",
+      "service": 33
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 92,
+    "fields": {
+      "name": "#водитель",
+      "service": 33
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 93,
+    "fields": {
+      "name": "#детали",
+      "service": 33
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 94,
+    "fields": {
+      "name": "#оргтехника",
+      "service": 34
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 95,
+    "fields": {
+      "name": "#советотюриста",
+      "service": 35
+    }
+  },
+  {
+    "model": "api.servicehashtag",
+    "pk": 96,
+    "fields": {
+      "name": "#прокат",
+      "service": 36
+    }
+  }
+]

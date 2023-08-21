@@ -1,4 +1,5 @@
 import docx2txt
+import re
 
 
 def make_list_from_text(text: str):
@@ -9,8 +10,17 @@ def make_list_from_text(text: str):
 def get_categories_from_file(filename: str):
     text = docx2txt.process(filename)
     lines = make_list_from_text(text)
-    print([line.split('  ') for line in lines])
+    result = {}
+
+    for line in lines:
+
+        tags = re.findall(r'#[a-zа-яё_-]+', line)
+        for tag in tags:
+            if tag in line:
+                line = line.replace(tag, '').strip()
+        result[line] = tags
+
+    return result
 
 
-get_categories_from_file("../категории.docx")
 

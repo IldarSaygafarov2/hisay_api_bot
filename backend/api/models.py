@@ -28,7 +28,7 @@ class Service(models.Model):
 
 class ServiceHashtag(models.Model):
     name = models.CharField(verbose_name="Хештег", max_length=255)
-    service = models.ForeignKey(Service, on_delete=models.CASCADE)
+    service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name="services")
 
     def __str__(self):
         return self.name

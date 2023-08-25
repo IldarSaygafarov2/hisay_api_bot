@@ -1,7 +1,20 @@
-from django.contrib.auth.models import User
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
-from .models import UserProfile
+
+from .models import UserProfile, Service, ServiceProfile
+
+
+class ServiceProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ServiceProfile
+        fields = ("first_name",
+                  "last_name",
+                  "surname",
+                  "document_photo",
+                  "kind_of_activity",
+                  "telegram_chat_id",
+                  "service",
+                  )
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -30,3 +43,9 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserProfile
         fields = ('id', 'username', 'email', 'password', 'phone_number')
+
+
+class ServiceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Service
+        fields = ("id", "name")

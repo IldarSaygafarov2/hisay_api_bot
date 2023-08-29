@@ -1,11 +1,16 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
-from .models import UserProfile, ServiceProfile, Service, ServiceHashtag
+from .models import UserProfile, ServiceProfile, Service, ServiceHashtag, SimpleUserProfile
 
 
-class UserProfileAdmin(UserAdmin):
+@admin.register(SimpleUserProfile)
+class SimpleUserProfileAdmin(admin.ModelAdmin):
     pass
+
+
+# class UserProfileAdmin(UserAdmin):
+#     pass
 
 
 class ServiceProfileAdmin(admin.ModelAdmin):
@@ -21,6 +26,6 @@ class ServiceAdmin(admin.ModelAdmin):
     inlines = [ServiceHashtagInline, ]
 
 
-admin.site.register(UserProfile, UserProfileAdmin)
+# admin.site.register(UserProfile, UserProfileAdmin)
 admin.site.register(ServiceProfile, ServiceProfileAdmin)
 admin.site.register(Service, ServiceAdmin)

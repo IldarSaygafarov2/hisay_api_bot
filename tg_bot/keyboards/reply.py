@@ -29,3 +29,19 @@ def services_menu():
     ]
     kb.add(*buttons)
     return kb
+
+
+def start_request_kb():
+    kb = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    kb.row(
+        types.KeyboardButton(text="Начать")
+    )
+    return kb
+
+
+def location_menu():
+    kb = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    kb.row(
+        types.KeyboardButton(text="Отправить локацию", request_location=True)
+    )
+    return kb

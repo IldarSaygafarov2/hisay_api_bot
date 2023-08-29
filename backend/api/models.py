@@ -2,12 +2,9 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 
-# Create your models here.
-
-
 class UserProfile(AbstractUser):
     phone_number = models.CharField(verbose_name="Номер телефона", max_length=15)
-    telegram_chat_id = models.BigIntegerField(default=0, blank=True, null=True)
+    telegram_chat_id = models.BigIntegerField(default=0, blank=True, null=True, unique=True)
 
 
 class Service(models.Model):
@@ -31,8 +28,18 @@ class ServiceProfile(models.Model):
     surname = models.CharField(verbose_name="Отчество", max_length=150)
     document_photo = models.ImageField(verbose_name="Фото", upload_to="services/photos/", null=True, blank=True)
     kind_of_activity = models.CharField(verbose_name="Вид деятельности", max_length=150)
-    telegram_chat_id = models.BigIntegerField(default=0, blank=True, null=True)
+    telegram_chat_id = models.BigIntegerField(default=0, blank=True, null=True, unique=True)
     service = models.ForeignKey(Service, on_delete=models.CASCADE, verbose_name="Сервис", null=True)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}: {self.kind_of_activity}"
+
+
+class SimpleUserProfile(models.Model):
+    tg_username = models.CharField(max_length=150)
+    fullname = models.CharField(max_length=255)
+    tg_chat_id = models.BigIntegerField()
+    phone_number = models.CharField(max_length=15)
+
+    def __str__(self):
+        return f"{self.fullname}: {self.phone_number}"

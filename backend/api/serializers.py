@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 
-from .models import UserProfile, Service, ServiceProfile
+from .models import UserProfile, Service, ServiceProfile, SimpleUserProfile
 
 
 class ServiceProfileSerializer(serializers.ModelSerializer):
@@ -49,3 +49,9 @@ class ServiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Service
         fields = ("id", "name")
+
+
+class SimpleUserProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SimpleUserProfile
+        fields = ("tg_username", "fullname", "tg_chat_id", "phone_number")

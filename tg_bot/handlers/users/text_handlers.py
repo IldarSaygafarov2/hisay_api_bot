@@ -70,6 +70,11 @@ def get_fullname_process_number(message: types.Message):
     chat_id = message.chat.id
     fullname = message.text
 
+    if not len(fullname.split()) == 3:
+        bot.send_message(chat_id, "Вы что-то забыли")
+        register_service(message)
+        return
+
     bot.send_message(chat_id, "Отправьте или напишите ваш номер телефона", reply_markup=phone_number_button())
     bot.register_next_step_handler(message, get_number_process_photo, fullname)
 
@@ -98,9 +103,11 @@ def get_photo_process_activity(message: types.Message, fullname, phone_number):
 
 def get_activity_process_registration(message: types.Message, fullname, phone_number, file_id):
     chat_id = message.chat.id
+
     lastname, first_name, surname = fullname.split(" ")
 
     file = bot.get_file(file_id)
+    filename = file.file_path.split("/")[-1]
     service_id = api.get_service_id(message.text)
 
     file_url = config.telegram_url.format(
@@ -108,17 +115,18 @@ def get_activity_process_registration(message: types.Message, fullname, phone_nu
         file_path=file.file_path
     )
 
+    photo = requests.get(file_url).content
+
     data_dict = {
         "first_name": first_name,
         "last_name": lastname,
         "surname": surname,
-        "document_photo": file,
         "kind_of_activity": message.text,
         "telegram_chat_id": message.chat.id,
         "service": service_id['service_id'],
     }
 
-    api.create_service_profile(data_dict)
+    api.create_service_profile(data_dict, photo)
 
     bot.send_photo(chat_id, photo=file_id, caption=f"""
 ФИО: <b>{fullname}</b>

@@ -29,7 +29,10 @@ class ServiceProfile(models.Model):
     first_name = models.CharField(verbose_name="Имя", max_length=150)
     last_name = models.CharField(verbose_name="Фамилия", max_length=150)
     surname = models.CharField(verbose_name="Отчество", max_length=150)
-    document_photo = models.ImageField(verbose_name="Фото", upload_to="services/photos/")
+    document_photo = models.ImageField(verbose_name="Фото", upload_to="services/photos/", null=True, blank=True)
     kind_of_activity = models.CharField(verbose_name="Вид деятельности", max_length=150)
     telegram_chat_id = models.BigIntegerField(default=0, blank=True, null=True)
     service = models.ForeignKey(Service, on_delete=models.CASCADE, verbose_name="Сервис", null=True)
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}: {self.kind_of_activity}"

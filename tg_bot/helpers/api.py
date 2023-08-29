@@ -15,9 +15,9 @@ def get_service_id(name):
     return service_id
 
 
-def create_service_profile(service_data):
+def create_service_profile(service_data, file):
     endpoint = BASE_URL + '/service-profile/create'
-    s = requests.post(endpoint, json=service_data)
+    file_data = {'document_photo': file}
+    s = requests.post(endpoint, data=service_data, files=file_data)
     print(s.text)
-
     print('service created')

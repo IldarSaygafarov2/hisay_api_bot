@@ -1,16 +1,16 @@
 from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin
 
-from .models import UserProfile, ServiceProfile, Service, ServiceHashtag, SimpleUserProfile
+from .models import ServiceProfile, Service, ServiceHashtag, SimpleUserProfile, UserRequest
+
+
+@admin.register(UserRequest)
+class UserRequestAdmin(admin.ModelAdmin):
+    pass
 
 
 @admin.register(SimpleUserProfile)
 class SimpleUserProfileAdmin(admin.ModelAdmin):
     pass
-
-
-# class UserProfileAdmin(UserAdmin):
-#     pass
 
 
 class ServiceProfileAdmin(admin.ModelAdmin):

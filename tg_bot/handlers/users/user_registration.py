@@ -4,6 +4,7 @@ from tg_bot.data.loader import bot
 from tg_bot.helpers.utils import __get_phone_number
 from tg_bot.helpers import api
 from tg_bot.keyboards.reply import phone_number_button, start_request_kb
+from tg_bot.handlers.users.commands import command_start
 
 
 @bot.message_handler(func=lambda msg: msg.text == 'Пользователь')
@@ -40,3 +41,5 @@ def get_fullname(message: types.Message, phone_number):
     api.create_simple_user(user_data)
 
     bot.send_message(chat_id, "Регистрация прошла успешно")
+    command_start(message)
+

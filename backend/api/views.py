@@ -2,8 +2,8 @@ from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.generics import ListAPIView, CreateAPIView
 
-from .models import Service, ServiceProfile, UserProfile, SimpleUserProfile
-from .serializers import ServiceSerializer, ServiceProfileSerializer, SimpleUserProfileSerializer
+from .models import Service, ServiceProfile, UserProfile, SimpleUserProfile, UserRequest
+from .serializers import ServiceSerializer, ServiceProfileSerializer, SimpleUserProfileSerializer, UserRequestSerializer
 
 
 # Create your views here.
@@ -59,3 +59,8 @@ def get_simple_users_chat_id(request):
             simple_user.tg_chat_id for simple_user in simple_users
         ]
     })
+
+
+class UserRequestCreate(CreateAPIView):
+    queryset = UserRequest.objects.all()
+    serializer_class = UserRequestSerializer

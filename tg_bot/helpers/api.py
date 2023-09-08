@@ -35,4 +35,11 @@ def get_simple_users_profiles_ids():
 def create_simple_user(user_data):
     endpoint = BASE_URL + "/users/create/"
     resp = requests.post(endpoint, data=user_data)
+
+
+def create_user_request(request_data):
+    endpoint = BASE_URL + "/services/create/"
+    resp = requests.post(endpoint, request_data)
     print(resp.text)
+
+

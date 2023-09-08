@@ -9,7 +9,7 @@ from tg_bot.keyboards.reply import services_menu, location_menu
 def start_processing_request(message: types.Message):
     chat_id = message.chat.id
 
-    bot.send_message(chat_id, "Напишите заголовок для вашего запроса")
+    bot.send_message(chat_id, "Напишите заголовок для вашего запроса", reply_markup=types.ReplyKeyboardRemove())
     bot.register_next_step_handler(message, get_title_process_description)
 
 
@@ -49,7 +49,18 @@ def get_hashtags_process_location(message: types.Message, title: str, descriptio
 
 def collect_all_data(message: types.Message, title, description, username, service):
     coordinates = f"{message.location.latitude}, {message.location.longitude}"
-
+    service_id = api.get_service_id(service)
     chat_id = message.chat.id
 
-    print(title, description, username, service, coordinates)
+    request_data = {
+        "chat_id": chat_id,
+        "title": title,
+        "body": description,
+        "username": username,
+        "service": service_id['service_id'],
+        "location": coordinates,
+    }
+
+    api.create_user_request(request_data)
+
+    # print(title, description, username, service, coordinates)

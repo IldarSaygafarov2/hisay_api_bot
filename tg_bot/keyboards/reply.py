@@ -45,3 +45,12 @@ def location_menu():
         types.KeyboardButton(text="Отправить локацию", request_location=True)
     )
     return kb
+
+
+def simple_user_kb():
+    kb = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
+    kb.row(
+        types.KeyboardButton('Оставить заявку'),
+        types.KeyboardButton('Мои заявки'),
+    )
+    return kb

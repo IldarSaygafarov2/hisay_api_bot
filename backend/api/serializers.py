@@ -1,7 +1,20 @@
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 
-from .models import UserProfile, Service, ServiceProfile, SimpleUserProfile
+from .models import UserProfile, Service, ServiceProfile, SimpleUserProfile, UserRequest
+
+
+class UserRequestSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserRequest
+        fields = (
+            "chat_id",
+            "title",
+            "body",
+            "username",
+            "service",
+            "location"
+        )
 
 
 class ServiceProfileSerializer(serializers.ModelSerializer):

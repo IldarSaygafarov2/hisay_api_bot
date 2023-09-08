@@ -43,3 +43,14 @@ class SimpleUserProfile(models.Model):
 
     def __str__(self):
         return f"{self.fullname}: {self.phone_number}"
+
+
+class UserRequest(models.Model):
+    chat_id = models.BigIntegerField(default=0)
+    title = models.CharField(max_length=1000, verbose_name="Заголовок заявки")
+    body = models.TextField(verbose_name="Описание заявки")
+    username = models.CharField(verbose_name="Username", max_length=255,
+                                help_text="Username пользователя бота который оставил заявку")
+    service = models.ForeignKey(Service, on_delete=models.DO_NOTHING, related_name="requests", verbose_name="Сервис")
+    location = models.CharField(verbose_name="Локация", max_length=255)
+

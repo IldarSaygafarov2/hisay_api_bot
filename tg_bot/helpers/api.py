@@ -15,8 +15,14 @@ def get_service_id(name):
     return service_id
 
 
+def get_service_name(service_id):
+    endpoint = BASE_URL + f'/services/get/{service_id}/'
+    res = requests.get(endpoint)
+    return res.json()
+
+
 def create_service_profile(service_data, file):
-    endpoint = BASE_URL + '/service-profile/create'
+    endpoint = BASE_URL + '/service-profile/create/'
     requests.post(endpoint, data=service_data, files=file)
 
 
@@ -34,12 +40,34 @@ def get_simple_users_profiles_ids():
 
 def create_simple_user(user_data):
     endpoint = BASE_URL + "/users/create/"
-    resp = requests.post(endpoint, data=user_data)
+    requests.post(endpoint, data=user_data)
 
 
 def create_user_request(request_data):
     endpoint = BASE_URL + "/services/create/"
     resp = requests.post(endpoint, request_data)
-    print(resp.text)
+
+
+def check_verification_code(verification_code):
+    endpoint = BASE_URL + f'/users/code/check/{verification_code}/'
+    requests.post(endpoint)
+
+
+def get_hashtags_by_service(service_id):
+    endpoint = BASE_URL + f"/services/{service_id}/hashtags/"
+    res = requests.get(endpoint)
+    try:
+        return res.json()
+    except Exception as e:
+        print(e, e.__class__)
+
+
+def add_hashtags_to_service(service_id, tags_list):
+    endpoint = BASE_URL + "/services/hashtags/add/"
+    data = {
+        "service_id": service_id,
+        "tags_list": tags_list
+    }
+    requests.post(endpoint, data=data)
 
 

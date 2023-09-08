@@ -39,6 +39,15 @@ def start_request_kb():
     return kb
 
 
+def continue_kb():
+    kb = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    kb.row(
+        types.KeyboardButton(text="Не добавлять"),
+        types.KeyboardButton(text="Добавить"),
+    )
+    return kb
+
+
 def location_menu():
     kb = types.ReplyKeyboardMarkup(resize_keyboard=True)
     kb.row(

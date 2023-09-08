@@ -23,6 +23,7 @@ class ServiceProfileSerializer(serializers.ModelSerializer):
         fields = ("first_name",
                   "last_name",
                   "surname",
+                  "phone_number",
                   "document_photo",
                   "kind_of_activity",
                   "telegram_chat_id",

@@ -5,6 +5,8 @@ from rest_framework.decorators import api_view
 from rest_framework.generics import ListAPIView, CreateAPIView
 from rest_framework.response import Response
 
+from backend import settings
+
 from .models import (
     Service,
     ServiceProfile,
@@ -72,13 +74,12 @@ def get_hashtags_by_service(request, service_id):
 @api_view(["POST"])
 def generate_tags_for_service(request):
     data = dict(**request.data)
-    print(data)
     service = Service.objects.get(pk=data['service_id'][0])
-    print('asdfasasfd')
     for value in data['tags_list']:
         ServiceHashtag.objects.create(
             service=service, name=value
         )
+
     return JsonResponse({"status": "ok"})
 
 
@@ -104,8 +105,9 @@ def get_simple_users_chat_id(request):
 
 @api_view(["POST"])
 def generate_auth_code(request):
-    data = request.data
+    import requests
 
+    data = request.data
     x = random.sample([f"{i}" for i in range(10)], 6)
     code = ''.join(x)
 
@@ -113,6 +115,12 @@ def generate_auth_code(request):
         service_profile = ServiceProfile.objects.get(phone_number=data["phone_number"])
         service_profile.verification_code = code
         service_profile.save()
+
+        requests.post(url=settings.telegram_msg_url.format(
+            token=settings.BOT_TOKEN,
+            chat_id=service_profile.telegram_chat_id,
+            text=code
+        ))
     except Exception as e:
         print(e.__class__)
         return Response({"status": "No user with this phone number"})

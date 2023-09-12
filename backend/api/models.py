@@ -30,7 +30,8 @@ class ServiceProfile(models.Model):
     phone_number = models.CharField(max_length=15, default="")
     kind_of_activity = models.CharField(verbose_name="Вид деятельности", max_length=150)
     telegram_chat_id = models.BigIntegerField(default=0, blank=True, null=True, unique=True)
-    service = models.ForeignKey(Service, on_delete=models.CASCADE, verbose_name="Сервис", null=True)
+    service = models.ForeignKey(Service, on_delete=models.CASCADE, verbose_name="Сервис", null=True,
+                                related_name="profile_services")
     verification_code = models.CharField(max_length=6, blank=True, null=True)
 
     def __str__(self):

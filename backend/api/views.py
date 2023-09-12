@@ -7,6 +7,7 @@ from rest_framework.response import Response
 
 from backend import settings
 
+
 from .models import (
     Service,
     ServiceProfile,
@@ -128,8 +129,19 @@ def generate_auth_code(request):
 
 
 @api_view(["POST"])
-def check_verification_code(request, verification_code):
-    user = ServiceProfile.objects.filter(verification_code=verification_code)
+def check_verification_code(request):
+    data = request.data
+    user = ServiceProfile.objects.filter(verification_code=data['verification_code'])
     if not user:
-        return JsonResponse({"exists": False})
-    return JsonResponse({'exists': True})
+        return Response({"exists": False})
+    # print(user.first().__dict__)
+    return Response({'exists': True, "user_id": user.first().pk})
+
+
+@api_view(["GET"])
+def get_user_requests_for_service(request, service_id):
+    obj = ServiceProfile.objects.get(pk=service_id)
+    user_requests = UserRequest.objects.filter(service=obj.service.pk)
+    user_requests = list(user_requests.values())
+    return Response({"requests": user_requests})
+

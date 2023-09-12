@@ -3,13 +3,12 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    # path("users/", views.get_users_chat_id),
     path('users/create/', views.SimpleUserProfileCreate.as_view(), name='account-create'),
     path("simple-users-profiles/ids/", views.get_simple_users_chat_id, name="simple-users-profiles-ids"),
     path("users/code/generate/", views.generate_auth_code, name="generate-auth-code"),
-    path("users/code/check/<str:verification_code>/", views.check_verification_code, name="check-auth-code"),
+    path("users/code/check/", views.check_verification_code, name="check-auth-code"),
     path("services/", views.ServiceListAPIView.as_view(), name="services"),
-    # path("services/hashtags/", views.get_services_hashtags, name="services-hashtags"),
+    path("services/<str:service_id>/requests/", views.get_user_requests_for_service, name="requests-services"),
     path("services/hashtags/add/", views.generate_tags_for_service, name="services-hashtags-add"),
     path("services/<str:service_id>/hashtags/", views.get_hashtags_by_service, name="hashtags-by-service"),
     path("services/create/", views.UserRequestCreate.as_view(), name="services-create"),

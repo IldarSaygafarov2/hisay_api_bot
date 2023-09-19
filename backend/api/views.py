@@ -7,7 +7,6 @@ from rest_framework.response import Response
 
 from backend import settings
 
-
 from .models import (
     Service,
     ServiceProfile,
@@ -145,3 +144,12 @@ def get_user_requests_for_service(request, service_id):
     user_requests = list(user_requests.values())
     return Response({"requests": user_requests})
 
+
+@api_view(['GET'])
+def get_simple_user(request, chat_id):
+    users = SimpleUserProfile.objects.all()
+    values = list(users.values())
+    result = [value for value in values if value['tg_chat_id'] == int(chat_id)]
+    if not result:
+        return Response({'status': 'user not found'})
+    return Response(result[0])

@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     path('users/create/', views.SimpleUserProfileCreate.as_view(), name='account-create'),
+    path('users/<str:chat_id>/', views.get_simple_user, name='simple-user'),
     path("simple-users-profiles/ids/", views.get_simple_users_chat_id, name="simple-users-profiles-ids"),
     path("users/code/generate/", views.generate_auth_code, name="generate-auth-code"),
     path("users/code/check/", views.check_verification_code, name="check-auth-code"),

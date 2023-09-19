@@ -43,7 +43,7 @@ class SimpleUserProfile(models.Model):
     fullname = models.CharField(max_length=255)
     tg_chat_id = models.BigIntegerField()
     phone_number = models.CharField(max_length=15)
-    service = models.ForeignKey(Service, on_delete=models.PROTECT, null=True, blank=True)
+    # service = models.ForeignKey(Service, on_delete=models.PROTECT, null=True, blank=True)
     # verification_code = models.CharField(max_length=6, blank=True, null=True)
 
     def __str__(self):
